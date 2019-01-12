@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">PopupQuiz</string>
+    <string name="action_settings">Settings</string>
+    <string name="answer_one">Answer One</string>
+    <string name="answer_two">Answer Two</string>
+    <string name="answer_three">Answer Three</string>
+    <string name="answer_four">Answer Four</string>
+    <string name="question_text">Add Question</string>
+</resources>

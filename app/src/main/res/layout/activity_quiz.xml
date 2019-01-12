@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/activity_quiz"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="amoghnagalla.popupquiz.QuizActivity">
+
+    <RadioButton
+        android:text="@string/answer_one"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/question_text"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginTop="156dp"
+        android:onClick="onRadioButtonClicked"
+        android:id="@+id/answer_one" />
+
+
+    <RadioButton
+        android:text="@string/answer_two"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answer_two"
+        android:layout_below="@+id/answer_one"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true"
+        android:onClick="onRadioButtonClicked"
+        android:layout_marginTop="20dp" />
+
+    <RadioButton
+        android:text="@string/answer_three"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/answer_three"
+        android:layout_marginTop="20dp"
+        android:onClick="onRadioButtonClicked"
+        android:layout_below="@+id/answer_two" />
+
+    <RadioButton
+        android:text="@string/answer_four"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/answer_three"
+        android:layout_marginTop="20dp"
+        android:onClick="onRadioButtonClicked"
+        android:id="@+id/answer_four" />
+
+    <TextView
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:id="@+id/question_text"
+        android:text="@string/question_text"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true" />
+
+    <Button
+        android:text="Next Question"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="54dp"
+        android:id="@+id/question_button"
+        android:layout_below="@+id/answer_four"
+        android:onClick="nextQuestion"
+       />
+
+</RelativeLayout>
+

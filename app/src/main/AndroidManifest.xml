@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="amoghnagalla.popupquiz">
+
+    <uses-permission android:name="android.permission.BLUETOOTH" />
+    <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+
+    <receiver android:name=".mReceiver">
+        <intent_filter>
+            <action android:name="android.bluetooth.BluetoothDevice.ACTION_FOUND" />
+        </intent_filter>
+    </receiver>
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".HomeScreen"
+            android:label="@string/app_name"
+            android:theme="@style/AppTheme.NoActionBar">
+            <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <uses-permission android:name="android.permission.BLUETOOTH_ADMIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".QuizActivity"
+            android:label="PopupQuiz"
+            android:theme="@style/AppTheme.NoActionBar"></activity>
+        <activity android:name=".QuizResults"></activity>
+    </application>
+
+</manifest>
